@@ -34,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@iconify/icons-lucide": "^1.2.135",
+    "@iconify/react": "^4.1.1"
   }
 }
