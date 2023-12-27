@@ -83,3 +83,7 @@ span {
   display: flex;
   flex-direction: column;
 }
+
+.add-item-category-span {
+  color: var(--primary--color);
+}
