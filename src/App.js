@@ -2,6 +2,9 @@ import "./index.css";
 
 import { categoryObj, dataObj } from "./obj.js";
 import { categoryAdd } from "./obj.js";
+import { navBtn } from "./obj.js";
+import { theme } from "./obj.js";
+import { user } from "./obj.js";
 
 function App() {
   return (
@@ -78,9 +81,37 @@ const Data = ({ title, obj }) => {
   );
 };
 
-
 const SecondSection = () => {
-  return <div></div>;
+  return (
+    <div className="second-section">
+      <Navbar btnObj={navBtn} themeIcon={theme} user={user} />
+
+      <div></div>
+    </div>
+  );
+};
+
+const Navbar = ({ btnObj, themeIcon, user }) => {
+  return (
+    <div className="nav-container">
+      <div>
+        <button className="nav-btn">
+          <img src={btnObj.icon} alt="button" />
+          <span>{btnObj.text}</span>
+        </button>
+      </div>
+      <div>
+        <img src={themeIcon.icon} alt="" />
+      </div>
+      <div className="profile-container">
+        <p>{user.name}</p>
+        <img src={user.profile} alt="profile" />
+        <button>
+          <img src="./Images/Icon/Felesh.png" alt="test" />
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default App;
